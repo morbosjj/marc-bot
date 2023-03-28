@@ -1,9 +1,10 @@
 const dotenv = require("dotenv");
-import express from 'express';
-// const PRTG = require('node-prtg');
-import PRTG from 'node-prtg/index.js';
-import colors from 'colors';
-import TelegramBot from'node-telegram-bot-api';
+const express = require("express");
+const PRTG = require("node-prtg");
+
+const colors = require("colors");
+const TelegramBot = require("node-telegram-bot-api");
+
 dotenv.config();
 const date = new Date();
 // const date = new Date().toLocaleString('en-PH', { timeZone: 'Asia/Singapore'});
