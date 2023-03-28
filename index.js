@@ -1,4 +1,4 @@
-import dotenv from 'dotenv';
+const dotenv = require("dotenv");
 import express from 'express';
 // const PRTG = require('node-prtg');
 import PRTG from 'node-prtg/index.js';
