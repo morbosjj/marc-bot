@@ -40,7 +40,7 @@ const vlan71 = 2158;
 const vlan73 = 2157;
 const vlan72 = 2284;
 const vlan75 = 2285;
-const interval = 31000;
+const interval = 25200;
 
 const app = express();
 const port = 3210;
@@ -468,7 +468,7 @@ let timer = null;
 
 bot.onText(/\/start/, (res) => {
     const message = `
-    <b><u>LIST OF REACTIVE REPORTS</u></b> \n\nCommands: \n • /incident for <b>INCIDENT REPORT</b>\n • /request for <b>REQUEST REPORT</b>\n • /taskdone for <b>TASKDONE REPORT</b>\n • /workphone for <b>WORKPHONE TRACK REPORT</b>\n • /pcmovement for <b>PC MOVEMENT REPORT</b>\n • /cable for <b>CABLES AND VLAN CHANGES REPORT</b>\n • /ipgservers for <b>IPGSERVERS REPORT</b>\n • /cablevlan for <b>CABLES AND VLAN CHANGES REPORT</b>\n <b><u>END SHIFT REPORT</u></b>\n\nCommands:\n • /amshift <b>AM SHIFT</b>\n • /midshift <b>MID SHIFT</b>\n • /pmshift <b>PM SHIFT</b>\n\n For the list command: /reports
+    <b><u>LIST OF REACTIVE REPORTS</u></b> \n\nCommands: \n • /incident for <b>INCIDENT REPORT</b>\n • /request for <b>REQUEST REPORT</b>\n • /taskdone for <b>TASKDONE REPORT</b>\n • /workphone for <b>WORKPHONE TRACK REPORT</b>\n • /pcmovement for <b>PC MOVEMENT REPORT</b>\n • /cable for <b>CABLES AND VLAN CHANGES REPORT</b>\n • /ipgservers for <b>IPGSERVERS REPORT</b>\n • /cablevlan for <b>CABLES AND VLAN CHANGES REPORT</b>\n <b><u>END SHIFT REPORT</u></b>\n\nCommands:\n • /amshift <b>AM SHIFT</b>\n • /midshift <b>MID SHIFT</b>\n • /pmshift <b>PM SHIFT</b>\n\n For the list command: /reports   <i><b>Note: Kindly check and update the Time & Date.</b></i>
     `;
 
     // timer = setInterval(() => {
