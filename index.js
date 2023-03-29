@@ -458,13 +458,13 @@ bot.onText(/\/start/, (res) => {
     // }, 1000)3,600,000    
     start = setInterval(() => {
         console.log("Running service...");
-    }, interval);
+    }, 100000);
 
     timer = setInterval(() => {
         // if(new Date().getSeconds() === 1) {
         bot.sendMessage(user_telegram, message, { parse_mode: "HTML" });
         // }
-    }, 25200);
+    }, 25200000);
     console.log(res);
     // 25200000
 });
