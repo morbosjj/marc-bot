@@ -40,7 +40,7 @@ const vlan71 = 2158;
 const vlan73 = 2157;
 const vlan72 = 2284;
 const vlan75 = 2285;
-const interval = 25200;
+const interval = 3000;
 
 const app = express();
 const port = 3210;
