@@ -6,8 +6,8 @@ const colors = require("colors");
 const TelegramBot = require("node-telegram-bot-api");
 
 dotenv.config();
-const date = new Date();
-// const date = new Date().toLocaleString('en-PH', { timeZone: 'Asia/Singapore'});
+// const date = new Date();
+const date = new Date().toLocaleString('en-PH', { timeZone: 'Asia/Singapore'});
 
 const day = ("0" + date.getDate()).slice(-2);
 const month = ("0" + date.getMonth() + 1).slice(-2);
