@@ -464,7 +464,7 @@ bot.onText(/\/start/, (res) => {
         // if(new Date().getSeconds() === 1) {
         bot.sendMessage(user_telegram, message, { parse_mode: "HTML" });
         // }
-    }, 5000);
+    }, 25200);
     console.log(res);
     // 25200000
 });
