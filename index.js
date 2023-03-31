@@ -19,6 +19,10 @@ const hours = date.getHours();
 // const minutes = ("0" + date.getMinutes()).slice(-2);
 const minutes = date.getMinutes();
 
+
+let updatedDate = `${day}/${month}/${year}`;
+let updatedTime = `${hours}:${minutes}`;
+
 let executed = false;
 
 // const axios = require('axios');
