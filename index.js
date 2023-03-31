@@ -65,53 +65,53 @@ app.use(express.urlencoded({ extended: false }));
 
 app.listen(port, () => console.log(`Server started on ${port}`));
 
-const inventoryMsg = `<b><u>TOTAL OF NECESSARY OFFICE ITEMS</u></b>\n<b>Headset: </b>0 A4tech, 0 BadWolf\n<b>System Unit:</b> 5 \n<b>Work phone: </b>20 iPhone,  5 android
+const inventoryMsg = `<b><u>TOTAL OF NECESSARY OFFICE ITEMS</u></b>\n<b>Headset: </b>16 BadWolf\n<b>System Unit:</b> 4 \n<b>Work phone: </b>15 iPhone
 `;
-const incidentMsg = `
-    <b><u>INCIDENT REPORT</u></b>\n<b>Time & Date: </b>${hours}:${minutes} (${month}/${day}/${year})\n<b>Computer No:</b>\n<b>Employee:</b>\n<b>Issue:</b>\n<b>Resolve:</b>
+
+let incidentMsg = `
+    <b><u>INCIDENT REPORT</u></b>\n<b>Time & Date: </b>${updatedTime} (${updatedDate}) \n<b>Computer No:</b>\n<b>Employee:</b>\n<b>Issue:</b>\n<b>Resolve:</b>
     `;
 
+
 const requestMsg = `
-    <b><u>REQUEST REPORT</u></b>\n<b>Time & Date: </b>${hours}:${minutes} (${month}/${day}/${year})\n<b>Computer No:</b>\n<b>Employee:</b>\n<b>Requested:</b>\n<b>Action:</b>
+    <b><u>REQUEST REPORT</u></b>\n<b>Time & Date: </b>${updatedTime} (${updatedDate})\n<b>Computer No:</b>\n<b>Employee:</b>\n<b>Requested:</b>\n<b>Action:</b>
     `;
 
 const workphoneMsg = `
-    <b><u>WORKPHONE TRACK REPORT</u></b>\n<b>Time & Date: </b>${hours}:${minutes} (${month}/${day}/${year})\n<b>Type of Phone:</b>\n<b>Employee:</b>\n<b>Action:</b>\n<b>Remaining:</b>
+    <b><u>WORKPHONE TRACK REPORT</u></b>\n<b>Time & Date: </b>${updatedTime} (${updatedDate})\n<b>Type of Phone:</b>\n<b>Employee:</b>\n<b>Action:</b>\n<b>Remaining:</b>
     `;
 
 const taskdoneMsg = `
-    <b><u>TASKDONE REPORT</u></b>\n<b>Time & Date: </b>${hours}:${minutes} (${month}/${day}/${year})\n<b>Subject:</b>\n<b>Attainment:</b>
+    <b><u>TASKDONE REPORT</u></b>\n<b>Time & Date: </b>${updatedTime} (${updatedDate})\n<b>Subject:</b>\n<b>Attainment:</b>
     `;
 
 const pcmovementMsg = `
-    <b><u>PC MOVEMENT REPORT</u></b>\n<b>Time & Date: </b>${hours}:${minutes} (${month}/${day}/${year})\n<b>Computer No:</b>\n<b>Employee:</b>\n<b>Movement:</b>
+    <b><u>PC MOVEMENT REPORT</u></b>\n<b>Time & Date: </b>${updatedTime} (${updatedDate})\n<b>Computer No:</b>\n<b>Employee:</b>\n<b>Movement:</b>
     `;
 
 const ipgserversMsg = `
-    <b><u>IPGSERVERS REPORT</u></b>\n<b>Time & Date: </b>${hours}:${minutes} (${month}/${day}/${year})\n<b>Subject:</b>\n<b>Attainment:</b>
+    <b><u>IPGSERVERS REPORT</u></b>\n<b>Time & Date: </b>${updatedTime} (${updatedDate})\n<b>Subject:</b>\n<b>Attainment:</b>
     `;
 
-const cableMsg = `<b><u>CABLES AND VLAN CHANGES REPORT</u></b>\n<b>Time & Date: </b>${hours}:${minutes} (${month}/${day}/${year})\n<b>Cable No: </b>\n<b>Computer No:</b>\n<b>Employee: </b>\n<b>Changes: </b>\n<b>Reason for Changes: </b>
+const cableMsg = `<b><u>CABLES AND VLAN CHANGES REPORT</u></b>\n<b>Time & Date: </b>${updatedTime} (${updatedDate})\n<b>Cable No: </b>\n<b>Computer No:</b>\n<b>Employee: </b>\n<b>Changes: </b>\n<b>Reason for Changes: </b>
 `;
 
 const powerMsg = `
-<b><u>INCIDENT REPORT</u></b>\n<b>Time & Date: </b>${hours}:${minutes} (${month}/${day}/${year})\n<b>Issue:</b> No Electricity Power at \n<b>Remarks:</b>
+<b><u>INCIDENT REPORT</u></b>\n<b>Time & Date: </b>${updatedTime} (${updatedDate})\n<b>Issue:</b> No Electricity Power at \n<b>Remarks:</b>
 `;
 
 
 const amshiftMsg = `
-    <b><u>END OF SHIFT REPORT</u></b>\n<b>Date: </b> ${month}/${day}/${year}\n<b>Working hours: </b>06:00 - 14:00\n\n${inventoryMsg}
+    <b><u>END OF SHIFT REPORT</u></b>\n<b>Date: </b> ${updatedDate}\n<b>Working hours: </b>06:00 - 14:00\n\n${inventoryMsg}
     `;
 
 const midshiftMsg = `
-    <b><u>END OF SHIFT REPORT</u></b>\n<b>Date: </b> ${month}/${day}/${year}\n<b>Working hours: </b>14:00 - 22:00\n\n${inventoryMsg}
+    <b><u>END OF SHIFT REPORT</u></b>\n<b>Date: </b> ${updatedDate}\n<b>Working hours: </b>14:00 - 22:00\n\n${inventoryMsg}
     `;
 
 const pmshiftMsg = `
-    <b><u>END OF SHIFT REPORT</u></b>\n<b>Date: </b> ${month}/${day}/${year} - DATE \n<b>Working hours: </b>22:00 - 06:00\n\n${inventoryMsg}
+    <b><u>END OF SHIFT REPORT</u></b>\n<b>Date: </b> ${updatedDate} - DATE \n<b>Working hours: </b>22:00 - 06:00\n\n${inventoryMsg}
     `;
-
-
 bot.onText(/\/ph/, (msg) => {
     const ph_html = `
         <b><u>PH-LINE PUBLIC IP</u></b>
