@@ -13,7 +13,7 @@ const date = new Date();
 
 
 const day = ("0" + date.getDate()).slice(-2);
-let month = ("0" + (dateTime.getUTCMonth() + 1)).slice(-2)
+let month = ("0" + (date.getUTCMonth() + 1)).slice(-2)
 const year = date.getFullYear();
 const hours = date.getHours();
 // const minutes = ("0" + date.getMinutes()).slice(-2);
