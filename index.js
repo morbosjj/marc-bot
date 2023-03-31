@@ -20,7 +20,7 @@ const hours = date.getHours();
 const minutes = date.getMinutes();
 
 
-let updatedDate = `${day}/${month}/${year}`;
+let updatedDate = `${month}/${day}/${year}`;
 let updatedTime = `${hours}:${minutes}`;
 
 let executed = false;
