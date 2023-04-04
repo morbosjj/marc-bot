@@ -15,9 +15,9 @@ const date = new Date();
 const day = ("0" + date.getDate()).slice(-2);
 let month = ("0" + (date.getUTCMonth() + 1)).slice(-2)
 const year = date.getFullYear();
-const hours = date.getHours();
+const hours = ("0" + date.getHours()).slice(-2);
 // const minutes = ("0" + date.getMinutes()).slice(-2);
-const minutes = date.getMinutes();
+const minutes = ("0" + date.getMinutes()).slice(-2);
 
 
 let updatedDate = `${month}/${day}/${year}`;
@@ -116,16 +116,15 @@ const midshiftMsg = `
 const pmshiftMsg = `
     <b><u>END OF SHIFT REPORT</u></b>\n<b>Date: </b> ${updatedDate} - DATE \n<b>Working hours: </b>22:00 - 06:00\n\n${inventoryMsg}
     `;
-bot.onText(/\/ph/, (msg) => {
+bot.onText(/\/eastern/, (msg) => {
     const ph_html = `
-        <b><u>PH-LINE PUBLIC IP</u></b>
-        <b>PH1</b>
+        <b><u>EASTERN PUBLIC IP ADDRESSES</u></b>
         
-        116.50.242.98
-        116.50.242.99 <b><i>CURRENT</i></b>
-        116.50.242.100
-        116.50.242.101
-        116.50.242.102
+        116.50.188.74
+        116.50.188.75 <b><i>CURRENT</i></b>
+        116.50.188.76
+        116.50.188.77
+        116.50.188.78
     `;
 
     bot.sendMessage(msg.chat.id, ph_html, { parse_mode: "HTML" });
@@ -154,8 +153,18 @@ bot.onText(/\/hk/, (msg) => {
 });
 
 bot.onText(/\/hgc/, (msg) => {
-    const ph2_html = `
-        <b><u>LOCAL/HGC PUBLIC IP ADDRESSES</u></b>
+    const allpublic = `
+        <b><u>EASTERN PUBLIC IP ADDRESSES</u></b>
+        
+        116.50.188.74
+        116.50.188.75 <b><i>CURRENT</i></b>
+        116.50.188.76
+        116.50.188.77
+        116.50.188.78
+
+
+
+        <b><u>HGC PUBLIC IP ADDRESSES</u></b>
         <b>PH2</b>
         
         103.247.228.160
@@ -163,14 +172,31 @@ bot.onText(/\/hgc/, (msg) => {
         103.247.228.162
         103.247.228.163
         103.247.228.164
-        103.247.230.9
-        103.247.230.8 <b><i>CURRENT</i></b>
+    `;
+
+    bot.sendMessage(msg.chat.id, allpublic, { parse_mode: "HTML" });
+
+
+});
+
+
+bot.onText(/\/allpublic/, (msg) => {
+    const ph2_html = `
+        <b><u>HGC PUBLIC IP ADDRESSES</u></b>
+        <b>PH2</b>
+        
+        103.247.228.160
+        103.247.228.161
+        103.247.228.162
+        103.247.228.163
+        103.247.228.164
     `;
 
     bot.sendMessage(msg.chat.id, ph2_html, { parse_mode: "HTML" });
 
 
 });
+
 // [["/incident", "/request", "/taskdone"], ["/workphone", "/pcmovement", "/ipgservers"], ["/amshift", "/midshift", "/pmshift"]]
 bot.onText(/\/network/, (msg) => {
     bot.sendPhoto(msg.chat.id, "https://ibb.co/5jTFTLm");
