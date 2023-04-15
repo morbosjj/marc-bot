@@ -69,8 +69,9 @@ app.use(express.urlencoded({ extended: false }));
 
 app.listen(port, () => console.log(`Server started on ${port}`));
 
-const inventoryMsg = `<b><u>TOTAL OF NECESSARY OFFICE ITEMS</u></b>\n<b>Headset: </b>16 BadWolf\n<b>System Unit:</b> 4 \n<b>Work phone: </b>15 iPhone
+const inventoryMsg = `<b><u>TOTAL OF NECESSARY OFFICE ITEMS</u></b>\n<b>System Unit:</b> 11 \n<b>Work phone: </b>14 iPhone
 `;
+
 
 let incidentMsg = `
     <b><u>INCIDENT REPORT</u></b>\n<b>Time & Date: </b>${updatedTime} (${updatedDate}) \n<b>Computer No:</b>\n<b>Employee:</b>\n<b>Issue:</b>\n<b>Resolve:</b>
