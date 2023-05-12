@@ -123,58 +123,82 @@ bot.onText(/\/eastern/, (msg) => {
     const ph_html = `
         <b><u>EASTERN PUBLIC IP ADDRESSES</u></b>
         
+        <b><u>10TH FLR IP BLOCK</u></b>
+        <b>Gateway IP:</b> 180.232.72.65
+        <b>Subnet Mask:</b> 255.255.255.248
+        <b>Usable IP:</b>
+        180.232.72.66
+        180.232.72.65 <b><i>CURRENT</i></b>
+        180.232.72.67
+        180.232.72.68
+        180.232.72.69
+        180.232.72.70
+
+
+        <b><u>28TH FLR IP BLOCKS</u></b>
+
+        <b><u>Block A</u></b>\n
+        <b>Gateway IP:</b> 116.50.188.73
+        <b>Subnet Mask:</b> 255.255.255.248
+
+        <b>Usable IP:</b>
         116.50.188.74
-        116.50.188.75 <b><i>CURRENT</i></b>
+        116.50.188.73 <b><i>CURRENT</i></b>
+        116.50.188.75
         116.50.188.76
         116.50.188.77
         116.50.188.78
+
+        <b><u>Block B</u></b>\n
+
+        <b>Gateway IP:</b> 180.232.82.217
+        <b>Subnet Mask:</b> 255.255.255.248
+
+        <b>Usable IP:</b>
+        180.232.82.217 <b><i>CURRENT</i></b>
+        180.232.82.218
+        180.232.82.219
+        180.232.82.220
+        180.232.82.221
+        180.232.82.222
     `;
 
     bot.sendMessage(msg.chat.id, ph_html, { parse_mode: "HTML" });
 });
 
-bot.onText(/\/hk/, (msg) => {
-    const hk_html = `
-    <b><u>HK-LINE PUBLIC IP</u></b>
-    <b>CMI</b>
-        223.119.193.226
-        223.119.193.227
-        223.119.193.228
-        223.119.193.229
-        223.119.193.230
-        223.119.193.231
-        223.119.193.232 <b><i>CURRENT</i></b>
-        223.119.193.233
-        223.119.193.234
-        223.119.193.335
-        223.119.193.236
-        223.119.193.237
-        223.119.193.238
+bot.onText(/\/hgc/, (msg) => {
+    const allpublic = `
+        <b><u>28TH FLR HGC IP BLOCK</u></b>
+        
+        <b>Gateway IP:</b> 103.247.230.1
+        <b>Subnet Mask:</b> 255.255.255.248
+
+        <b>Usable IP:</b>
+            103.247.230.8
+            103.247.230.9
+            103.247.230.10
+            103.247.230.11
+            103.247.230.1 <b><i>CURRENT</i></b>
     `;
 
-    bot.sendMessage(msg.chat.id, hk_html, { parse_mode: "HTML" });
+    bot.sendMessage(msg.chat.id, allpublic, { parse_mode: "HTML" });
+
+
 });
 
 bot.onText(/\/hgc/, (msg) => {
     const allpublic = `
-        <b><u>EASTERN PUBLIC IP ADDRESSES</u></b>
+    <b><u>28TH FLR HGC IP BLOCK</u></b>
         
-        116.50.188.74
-        116.50.188.75 <b><i>CURRENT</i></b>
-        116.50.188.76
-        116.50.188.77
-        116.50.188.78
+    <b>Gateway IP:</b> 103.247.230.1
+    <b>Subnet Mask:</b> 255.255.255.248
 
-
-
-        <b><u>HGC PUBLIC IP ADDRESSES</u></b>
-        <b>PH2</b>
-        
-        103.247.228.160
-        103.247.228.161
-        103.247.228.162
-        103.247.228.163
-        103.247.228.164
+    <b>Usable IP:</b>
+    103.247.230.8
+    103.247.230.9
+    103.247.230.10
+    103.247.230.11
+    103.247.230.1 <b><i>CURRENT</i></b>
     `;
 
     bot.sendMessage(msg.chat.id, allpublic, { parse_mode: "HTML" });
@@ -185,14 +209,55 @@ bot.onText(/\/hgc/, (msg) => {
 
 bot.onText(/\/allpublic/, (msg) => {
     const ph2_html = `
-        <b><u>HGC PUBLIC IP ADDRESSES</u></b>
-        <b>PH2</b>
+        <b><u>EASTERN PUBLIC IP ADDRESSES</u></b>
         
-        103.247.228.160
-        103.247.228.161
-        103.247.228.162
-        103.247.228.163
-        103.247.228.164
+        <b><u>10TH FLR IP BLOCK</u></b>
+        <b>Gateway IP:</b> 180.232.72.65
+        <b>Subnet Mask:</b> 255.255.255.248
+        <b>Usable IP:</b>
+            180.232.72.66
+            180.232.72.65 <b><i>CURRENT</i></b>
+            180.232.72.67
+            180.232.72.68
+            180.232.72.69
+            180.232.72.70
+
+
+        <b><u>28TH FLR IP BLOCKS</u></b>
+
+        <b><u>Block A</u></b>\n
+        <b>Gateway IP:</b> 116.50.188.73
+        <b>Subnet Mask:</b> 255.255.255.248
+        <b>Usable IP:</b>
+            116.50.188.74
+            116.50.188.73 <b><i>CURRENT</i></b>
+            116.50.188.75
+            116.50.188.76
+            116.50.188.77
+            116.50.188.78
+
+        <b><u>Block B</u></b>\n
+        <b>Gateway IP:</b> 180.232.82.217
+        <b>Subnet Mask:</b> 255.255.255.248
+        <b>Usable IP:</b>
+            180.232.82.217 <b><i>CURRENT</i></b>
+            180.232.82.218
+            180.232.82.219
+            180.232.82.220
+            180.232.82.221
+            180.232.82.222
+
+
+        <b><u>28TH FLR HGC IP BLOCK</u></b>
+        
+        <b>Gateway IP:</b> 103.247.230.1
+        <b>Subnet Mask:</b> 255.255.255.248
+        <b>Usable IP:</b>
+            103.247.230.8
+            103.247.230.9
+            103.247.230.10
+            103.247.230.11
+            103.247.230.1 <b><i>CURRENT</i></b>
     `;
 
     bot.sendMessage(msg.chat.id, ph2_html, { parse_mode: "HTML" });
