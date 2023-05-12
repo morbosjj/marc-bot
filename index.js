@@ -72,7 +72,7 @@ app.listen(port, () => console.log(`Server started on ${port}`));
 const inventoryMsg = `<b><u>TOTAL OF NECESSARY OFFICE ITEMS</u></b>\n<b>System Unit:</b> 11 \n<b>Work phone: </b>14 iPhone
 `;
 
-let inventoryList = `<b>Date: </b> ${updatedDate} \n<b>Items: </b>\n 1pc item_name\n 1pc item_name\n\n <b>Deploy: </b> (optional) \n`;
+let inventoryList = `<b>Date: </b> ${updatedDate} \n<b>Items: </b>\n 1pc item_name\n 1pc item_name\n\n<b>Deploy: </b> (optional) \n`;
 
 
 
@@ -429,9 +429,6 @@ bot.onText(/\/remove/, (msg) => {
 });
 
 bot.onText(/\/inventory/, (msg) => {
-    bot.sendMessage(msg.chat.id, inventoryList, { parse_mode: "HTML" });
-
-});bot.onText(/\/inventory/, (msg) => {
     bot.sendMessage(msg.chat.id, inventoryList, { parse_mode: "HTML" });
 
 });
